@@ -16,7 +16,7 @@ import json
 
 
 
-#Function which takes the user name as input and find the name in the json file
+#Function which gets the user name as input and find the name in the json file
 def Finder(name):
     #Here i added the direct name of the file you can use the relative path as per your given code
     try:
@@ -27,7 +27,7 @@ def Finder(name):
     # read the whole json file into a variable
     birthdayList = json.load(jsonFile)
 
-    #Main loop for the finding the name
+    #Loop for the finding the name
     for elem in birthdayList:
         if(name == elem["name"]):
             birthday = elem["birthday"]
