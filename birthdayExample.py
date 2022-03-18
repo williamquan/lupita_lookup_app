@@ -20,7 +20,7 @@ import json
 def Finder(name):
     #Here i added the direct name of the file you can use the relative path as per your given code
     try:
-        jsonFile = open("birthday.json", 'r')
+        jsonFile = open("lupita_lookup_app/birthday.json", 'r')
     except OSError:
         exit(-1)
 
