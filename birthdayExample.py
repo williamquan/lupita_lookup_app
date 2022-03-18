@@ -14,39 +14,32 @@ import json
 # mac (which is built on linux) and linux paths are like this: "a/b/c/d/e/f.json"
 #
 
-# relative path
-pathToFile = "birthday.json"
 
 
-# try to open a file and throw a error if it is not found
-try:
-    jsonFile = open(pathToFile, 'r')
-except OSError:
-    print("ERROR: Unable to open the file %s" % pathToFile)
+#Function which takes the user name as input and find the name in the json file
+def Finder(name):
+    #Here i added the direct name of the file you can use the relative path as per your given code
+    try:
+        jsonFile = open("birthday.json", 'r')
+    except OSError:
+        exit(-1)
+
+    # read the whole json file into a variable
+    birthdayList = json.load(jsonFile)
+
+    #Main loop for the finding the name
+    for elem in birthdayList:
+        if(name == elem["name"]):
+            birthday = elem["birthday"]
+            print("name = " + name)
+            print("birthday = " + birthday)
+            exit(0)
+
+    print("Craig does not have any friends that match this name")
 
 
-# read the whole json file into a variable
-birthdayList = json.load(jsonFile)
 
-# create an empty dictionary
-birthdayDictionary = {}
-
-# loop json list of data and put each name and birthday into a dictionary
-for elem in birthdayList:
-
-    # fetch name and birthday
-    name = elem["name"]
-    birthday = elem["birthday"]
-
-    print("name = " + name)
-    print("birthday = " + birthday)
-
-    birthdayDictionary[name] = birthday
-
-
-# to print a value in the dictionary by giving it a string with the name as the key
-print("Jocelyn Jones's birthday is: " + birthdayDictionary["Jocelyn Jones"])
 
 # to get user input
 name = input("Enter a name:")
-print("name = " + name)
+Finder(name)
