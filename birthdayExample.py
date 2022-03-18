@@ -35,7 +35,7 @@ def Finder(name):
             print("birthday = " + birthday)
             exit(0)
 
-    print("Craig does not have any friends that match this name")
+    print("Lupita does not have any friends that match this name")
 
 
 
