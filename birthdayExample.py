@@ -1,4 +1,4 @@
-# Gabriel Solomon, 2020
+# William Quan, 2022
 
 import json
 
@@ -11,7 +11,8 @@ import json
 # this is a full windows path, note the forward slashes "/" used in python
 # pathToFile = "E:/Users/jerome/GitHub/evc-cit134a-python/birthday/birthday.json"
 #
-# mac (which is built on linux) and linux paths are like this: "a/b/c/d/e/f.json"
+# mac (which is built on l
+# inux) and linux paths are like this: "a/b/c/d/e/f.json"
 #
 
 
